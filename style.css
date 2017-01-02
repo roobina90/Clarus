@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    color: #37474F;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+a {
+    color: #00B0FF;
+}
+
+.clrs-mainContainer {
+    background: url("./images/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top -50px center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.clrs-mainContainer-layer {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+}
+.clrs-leadText {
+    font-family: 'Josefin Sans' !important;
+    font-size: 40px;
+    font-weight: 700;
+}
