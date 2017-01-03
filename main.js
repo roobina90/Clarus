@@ -28,6 +28,6 @@
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(52.5085794, 19.7637328),
                     map: map,
-                    title: 'Snazzy!'
+                    title: 'Clarus - Salon pielęgnacji psów'
                 });
             }
