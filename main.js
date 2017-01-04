@@ -31,3 +31,11 @@
                     title: 'Clarus - Salon pielęgnacji psów'
                 });
             }
+
+
+$(window).on('load', function (e) {
+    setTimeout(function() {
+        $(".clrs-loadingLayer").fadeOut(400);
+        $(".clrs-mainContainer").fadeIn(1400);
+    }, 1500);
+})
