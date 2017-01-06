@@ -1,7 +1,7 @@
 
 // When the window has finished loading create our google map below
-//google.maps.event.addDomListener(window, 'load', init);
-
+//
+google.maps.event.addDomListener(window, 'load', init);
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -30,15 +30,22 @@ function init() {
         map: map,
         title: 'Clarus - Salon pielęgnacji psów'
     });
+
+     google.maps.event.addListenerOnce(map, 'idle', function() {
+    google.maps.event.trigger(map, 'resize');
+    });
 }
 
 
 $(window).on('load', function (e) {
     setTimeout(function () {
         $(".clrs-loadingLayer").fadeOut(400);
-        $(".clrs-mainContainer").fadeIn(1400);
+        $(".clrs-mainContainer").fadeIn(1400, function() {
+        init();
+    });
     }, 1500);
-    init();
+   
+
 })
 
 
