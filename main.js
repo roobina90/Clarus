@@ -1,16 +1,16 @@
 
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
+//google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 11,
+        zoom: 12,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(52.509807, 19.7427472), // Plock
+        center: new google.maps.LatLng(52.5085794, 19.7637328), // Plock
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -38,11 +38,12 @@ $(window).on('load', function (e) {
         $(".clrs-loadingLayer").fadeOut(400);
         $(".clrs-mainContainer").fadeIn(1400);
     }, 1500);
+    init();
 })
 
 
 $(function () {
-    $(".clrs-facebook").on("mouseover", function () {
+    $(".clrs-facebook").one("mouseover", function () {
         $(this).addClass("clrs-noAnimation");
     })
 })

@@ -4,14 +4,28 @@
 body {
     /*color: #37474F;*/
     color: #000;
-    background-image: url("./images/repeat.jpg");
-    background-repeat: repeat-y;
-    background-size: 100%;
+    background: #BFB1A6;
    
 font-family: 'Josefin Sans', sans-serif; 
 }
-a {
-    color: #00B0FF;
+
+a{
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+} 
+a:hover, a:active, a:focus {
+    border-bottom: solid 1px #1976D2;
+}
+
+
+a.clrs-link {
+    color: #1976D2;
+    font-weight: bold;
+    text-decoration: none;
+} 
+a.clrs-link:hover, a.clrs-link:active, a.clrs-link:focus {
+    border-bottom: solid 1px #1976D2;
 }
 #map {
     width: 100%;
@@ -19,10 +33,10 @@ a {
 }
 
 .clrs-mainContainer {
-    background: url("./images/back4.jpg");
+    background: url("./images/proba.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: top -50px center;
+    background-position: top center;
     width: 100%;
     height: 100vh;
     min-height: 500px;
@@ -33,7 +47,7 @@ a {
     font-size: 44px;
     font-weight: 300;
      font-family: 'Lobster', cursive;
-     padding-top: 20%;
+     padding-top: 10%;
     text-align: center;
 
     }
@@ -46,7 +60,7 @@ a {
     .clrs-sygnet {
         margin: 20px auto;
         padding: 20px;
-        width: 200px;
+        width: 300px;
         position: relative;
     }
 
@@ -55,14 +69,15 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    float: left;
 }
 .clrs-logo-text {
-        margin: 0 auto;
-        width: 60px;
-        display:block;
+        margin: 30px auto;
+        width: 120px;
+        float: left;
 }
 
 .clrs-column1 {
@@ -143,7 +158,10 @@ display: -ms-flexbox;
 .clrs-contactText-phone {
 
 }
-
+.clrs-label {
+    font-weight: bold;
+    color: #37474F;
+}
 .clrs-footer {
     width: 100%;
     background-color:#37474F;
@@ -160,7 +178,7 @@ display: -ms-flexbox;
     height: 100vh;
     width: 100vw;
     display:block;
-    z-index: 999;
+    z-index: 9999;
           display: flex;
   align-items: center;
   justify-content: center;
@@ -221,6 +239,24 @@ display: -ms-flexbox;
     cursor: pointer;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
+    z-index: 999;
+}
+
+.clrs-facebook--mobile {
+    display: none;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+     background-image: url("./images/facebook.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    transition: 0.3s all ease-in;
+}
+
+.clrs-facebook--mobile:hover, .clrs-facebook--mobile:active, .clrs-facebook--mobile:focus {
+    border-bottom: none;
+    transform: scale(1.05);
 }
 
 .clrs-noAnimation {
@@ -274,4 +310,30 @@ display: -ms-flexbox;
     font-size: 20px;
     margin: 20px;
     padding: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .clrs-mainContainer {
+         background-size: contain;
+    }
+    .clrs-column1,.clrs-column2 {
+        width: 100%;
+    }
+    .clrs-row {
+        display: block;
+    }
+    .clrs-contactText {
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .clrs-facebook  {
+        display: none;
+    }
+    .clrs-facebook--mobile {
+        display: block;
+    }
 }
