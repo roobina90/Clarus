@@ -39,7 +39,7 @@ function init() {
 
 $(window).on('load', function (e) {
     setTimeout(function () {
-        //$(".clrs-loadingLayer").fadeOut(400);
+        $(".clrs-loadingLayer").fadeOut(400);
         $(".clrs-mainContainer").fadeIn(1400, function() {
         init();
     });
