@@ -219,7 +219,7 @@ display: -ms-flexbox;
     width: 190px;
     height: 190px;
     background-image: url("./images/ring.gif");
-    background-size: container; 
+    background-size: contain; 
     margin: 0 auto;
       transition: all linear 1.5s;
 }
